@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<title>Ratespiel 2: Electric Boogaloo</title>
+	<!-- Wozu eigentlich Tooltipster einbinden? Steht nix von Tooltipster in den Anweisungen ::D Jquery braucht man aber "_" -->
+	<!-- Ich habe festgestellt, dass jsbin richtig nice ist, um Syntaxfehler zu finden -->
+	<!-- Oder generell rauszufinden, wo denn der verdammte Fehler liegt den man seit ner Stunde sucht -->
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+		<h2>Zahlenraten 2: Electric Boogaloo - Now with 100% more Bootstrap</h2>
+		Mit dem Klick auf "Start" wird eine zufällige Zahl zwischen 1 und 100 generiert. Ziel des Spiels ist es, diese Zahl in maximal 7 Versuchen zu erraten.
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8">
+			<!-- Texteingabe -->
+			<form>
+				<div class="form-group">
+					<label for="input">Guess:</label>
+					<input type="text" id="input">
+				</div>
+			</form>
+			<!-- Buttons: Check, Start -->
+			<button type="button" class="btn btn-primary inactive" id="check"><span class="glyphicon glyphicon-search"></span> Check</button>
+			<button type="button" class="btn btn-success" id="start"><span class="glyphicon glyphicon-refresh"></span> Start</button>
+			<!-- Verbleibende Versuche -->
+			<span class="badge" id="tries"> </span>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<!-- Versuchsliste -->
+			<div class="panel panel-default panel-body" id="status"> </div>
+			<ul class="list-group" id="results"> 
+			</ul>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="mechanik.js"></script>
+</body>
+</html>
